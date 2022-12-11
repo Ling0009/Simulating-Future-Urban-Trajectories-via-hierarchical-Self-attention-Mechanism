@@ -1,0 +1,153 @@
+时间步：24h-attention
+decoder：修改transformer，rnn
+
+轨迹仿真：
+尾气排放预测（加速率）、混合能源切换
+车用移动通信网络
+微观粒子（医学、物理）
+
+baseline：
+
+趋势性和周期性
+机器学习仿真
+
+timestep-transformer  decoder-一步预测
+天周期性、融合：相同输入，流量预测
+
+预训练
+损失函数
+学长，想问一下，如果使用transformer进行嵌入，应该是可以预训练的吧？就是对于用到的几个transformer，用真实的轨迹输入（第一层的transformer用的是网格形式的轨迹序列，第二层用的是第一层输出的轨迹嵌入），和经过本层transformer编码并解码之后的输出相对比，使用MSE损失函数，进行自回归的预训练。
+
+第一层可以预训练，第二层：按开始时间进行排序
+
+双向，attention
+
+仿真，生成：还是用自回归
+
+一月投稿
+
+预处理？除数据压缩外，异常检测？
+
+
+Douglas-puker
+k-means & hdbscan（起讫点
+一个显著的问题信号是，如果多次运行K均值的结果都有很大差异，那么有很高的概率K均值不适合当前数据，要对结果谨慎的分析。
+另一种替代方法是对原始数据进行多次随机采样得到多个小样本，并在小样本上聚类，并融合结果。比如原始数据是100万，那么从中随机采样出100个数据量等于1万的样本，并在100个小数据集上用更为复杂的算法进行聚类，并最终融合结果。
+
+traclus 轨迹分段聚类（apriori？
+remo
+
+
+实际意义：详细的点
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+在进入模型前用模型提取不同特征->环境信息
+CNN
+transformer:scene-object
+
+（预训练）结尾/下游任务：
+末尾正交
+ELM(?
+
+hash net？similarity
+数据量大且维度大时，准确找到最接近查询点的时间成本非常大（当数据量及维度大时）
+-可以查询
+
+(VQ)VAE - 获得分布
+
+multimodel - 图像特征和时间特征的处理
+连接、隐层、外积（FFT） - training trick：（使互补、独立）正则化，如reconstruction loss、trace norm regularization（高相关特征的权重相似）
+
+transformer本身：速度，位置编码，双向？- 简化
+进化算法
+
+data mining：
+demand&supply
+提前异常检测？
+土地类型，划分归类 -> clustering
+spatial - linear regression
+frequent pattern mining -> prediction
+
+point/segment(apripoi, traclus) clustering(partial)
+remo matrix
+
+spatial -> spatiotemporal
+constraints:road network, time segment
+global vs. partial
+
+RNN -> CNN ：multi-task
+CNN -> RNN （Conv-LSTM）
+CNN + RNN （fusion）
+
+long-short term & prediction
+
+下游任务：
+**traffic flow/speed prediction
+passenger flow prediction
+network congestion evolution
+highspeed rail demand prediction
+car-following behavior analysis
+
+spacial：绝对、相对  
+temporal：绝对（周、时）、相对（路段速度）
+
+起讫点（绝对时空，格子？）
+起讫点聚类、区域、坐标
+compression->路段（相对、绝对时空）：line simplification(DP)矢量（相对时空，取代map match）
+整体轨迹->cluster id->编码（绝对空间）
+绝对时间（embedding）
+
+hashnet
+
+直线、分段（匀速直线运动，相对时间、位置）
+cell/flow 分区 sequential pattern
+
+机器学习/简单分割、组合
+pattern mining？？？
+↓
+classification - clustering
+outlier hot-spot similarity predict-next-location
+hierarchical clustering\density clustering
+
+分布、（用什么？开始时间1维、数量不定->rnn\cnn）预测整条轨迹：解压起点、终点，decoder整条轨迹
+数据：变长度
+预测轨迹数
+注意力机制、生成模型
+（traffic prediction）
+
+dynamic
+
+reform
+
+od？
+matrix（vector）
+
+无用的东西：
+逐渐加入新类
+
+问题：
+noise filter
+数据集
+
+
+多特征
+其他领域模型迁移
+下游任务
+模型：rnn堆叠/Transformer
+
+

@@ -1,0 +1,6 @@
+﻿numpy==1.19.1
+pandas==1.1.2
+matplotlib
+tensorboard
+sklearn
+torch
